@@ -1,0 +1,57 @@
+  {% extends "base.html" %}
+
+  {% block title %}Prediction Result | HeartML{% endblock %}
+
+  {% block content %}
+
+  <section class="page fade-in">
+  <h1>Prediction Result</h1>
+
+  <!-- Dynamic color based on prediction -->
+  <div
+    class="result-text"
+    style="color: {% if 'high' in prediction|lower %}#f43f5e{% else %}#22c55e{% endif %};
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;"
+  >
+    {{ prediction }}
+  </div>
+
+  <!-- 🔥 Risk Percentage -->
+  <div style="font-size: 1.2rem; margin-bottom: 10px;">
+    Risk Probability: <strong>{{ risk_percentage }}%</strong>
+  </div>
+
+  <!-- 🔥 Progress Bar -->
+  <div style="width: 100%; background-color: #e5e7eb; border-radius: 10px; height: 20px; margin-bottom: 25px;">
+    <div style="
+        width: {{ risk_percentage }}%;
+        height: 100%;
+        border-radius: 10px;
+        transition: width 0.8s ease-in-out;
+        background-color: {% if 'high' in prediction|lower %}#f43f5e{% else %}#22c55e{% endif %};
+    ">
+    </div>
+  </div>
+
+  <!-- ⚠️ Medical Disclaimer -->
+<div style="
+    margin-top: 30px;
+    padding: 16px;
+    border-radius: 10px;
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 5px solid #facc15;
+    font-size: 0.95rem;
+    color: #facc15;
+">
+  <strong>Disclaimer:</strong>  
+  This prediction is generated using a Machine Learning model and is not a medical diagnosis.  
+  Please consult a qualified healthcare professional for proper medical advice.
+</div>
+
+  <!-- Button -->
+  <a href="{{ url_for('predict') }}" class="btn">🔄 Predict Again</a>
+  </section>
+
+  {% endblock %}

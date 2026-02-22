@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h2>❤️ Cardiovascular</h2>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/accuracy">Accuracy</a></li>
+      <li><a href="/symptoms">Symptoms</a></li>
+      <li><a href="/predict">Prediction</a></li>
+      <li><a href="/faq">FAQ</a></li>
+
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+    </ul>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

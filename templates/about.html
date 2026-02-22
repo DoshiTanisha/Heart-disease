@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}About | Heart Disease Prediction{% endblock %}
+
+{% block content %}
+
+<div class="ecg-wrapper">
+  <svg viewBox="0 0 600 100" class="ecg">
+    <polyline
+      points="
+        0,50
+        50,50
+        70,50
+        80,20
+        90,80
+        100,50
+        160,50
+        180,50
+        190,30
+        200,70
+        210,50
+        260,50
+        600,50
+      "
+      class="ecg-line"
+    />
+  </svg>
+</div>
+
+<section class="page fade-in">
+  <h1>🫀 About Heart Disease & This Project</h1>
+
+  <div class="about-box slide-up">
+    <h2>What is Heart Disease?</h2>
+    <p>
+      Heart disease refers to a range of cardiovascular conditions that affect
+      the heart and blood vessels. It is one of the leading causes of death
+      globally and often develops silently over time.
+    </p>
+    <p>
+      Common types include coronary artery disease, heart failure, arrhythmia,
+      and hypertension-related complications.
+    </p>
+  </div>
+
+  <div class="about-box slide-up">
+    <h2>Major Risk Factors</h2>
+    <ul class="about-list">
+      <li>🩺 High Blood Pressure</li>
+      <li>🧈 High Cholesterol</li>
+      <li>🍬 Diabetes</li>
+      <li>🚬 Smoking & Alcohol</li>
+      <li>⚖️ Obesity</li>
+      <li>🏃‍♂️ Lack of Physical Activity</li>
+      <li>👴 Age</li>
+    </ul>
+  </div>
+
+  <div class="about-box slide-up">
+    <h2>Why Early Detection Matters</h2>
+    <p>
+      Early detection allows preventive actions and lifestyle modification.
+      Machine learning helps identify hidden risk patterns early.
+    </p>
+  </div>
+
+  <div class="about-box slide-up">
+    <h2>About This ML Project</h2>
+    <p>
+      A machine learning–based system that predicts heart disease risk using
+      medical and lifestyle data.
+    </p>
+  </div>
+
+  <div class="about-box slide-up">
+    <h2>Machine Learning Workflow</h2>
+    <ul class="about-list">
+      <li>📊 Data Collection</li>
+      <li>🧹 Data Preprocessing</li>
+      <li>📉 Feature Scaling</li>
+      <li>🤖 Model Training</li>
+      <li>🏆 Best Model Selection</li>
+      <li>🌐 Flask Deployment</li>
+    </ul>
+  </div>
+
+  <div class="about-box highlight slide-up">
+    <h2>Why XGBoost?</h2>
+    <p>
+      <strong>XGBoost achieved the highest accuracy (74%)</strong> due to better
+      handling of complex features and reduced overfitting.
+    </p>
+  </div>
+
+  <div class="about-box highlight slide-up">
+    <h2>⚠️ Medical Disclaimer</h2>
+    <p>
+      This system is for educational purposes only and is not a medical diagnosis.
+      Always consult a healthcare professional.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

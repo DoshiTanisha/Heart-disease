@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Symptoms Checker | Heart Disease Prediction{% endblock %}
+
+{% block content %}
+
+<!-- ECG Animation -->
+<div class="ecg-wrapper">
+  <svg viewBox="0 0 600 100" class="ecg">
+    <polyline
+      points="
+        0,50
+        50,50
+        70,50
+        80,20
+        90,80
+        100,50
+        160,50
+        180,50
+        190,30
+        200,70
+        210,50
+        260,50
+        600,50
+      "
+      class="ecg-line"
+    />
+  </svg>
+</div>
+
+<!-- Hero Section -->
+<section class="hero fade-in">
+  <h1>Heart Disease Symptoms Checker</h1>
+  <p>
+    Identify common cardiovascular warning signs and assess whether you
+    should proceed with a detailed heart disease risk prediction.
+  </p>
+</section>
+
+<!-- Symptoms Cards Section -->
+<section class="cards slide-up">
+  <div class="card">
+    <h3>Select Symptoms</h3>
+
+    <form class="symptom-form">
+      <label><input type="checkbox" /> Chest Pain or Discomfort</label><br />
+      <label><input type="checkbox" /> Chest Tightness During Physical Activity</label><br />
+      <label><input type="checkbox" /> Shortness of Breath</label><br />
+      <label><input type="checkbox" /> Unusual or Persistent Fatigue</label><br />
+      <label><input type="checkbox" /> Dizziness or Lightheadedness</label><br />
+      <label><input type="checkbox" /> Irregular or Rapid Heartbeat (Palpitations)</label><br />
+      <label><input type="checkbox" /> High Blood Pressure</label><br />
+      <label><input type="checkbox" /> Swelling in Legs, Ankles, or Feet</label><br />
+      <label><input type="checkbox" /> Pain in Arm, Neck, Jaw, or Back</label><br />
+      <label><input type="checkbox" /> Excessive Sweating (Cold Sweat)</label><br />
+      <label><input type="checkbox" /> Nausea or Vomiting</label><br />
+      <label><input type="checkbox" /> Difficulty Sleeping Due to Breathing Issues</label><br />
+      <label><input type="checkbox" /> Sudden Weight Gain from Fluid Retention</label><br />
+      <label><input type="checkbox" /> Reduced Ability to Exercise</label><br />
+      <label><input type="checkbox" /> Persistent Cough or Wheezing</label><br /><br />
+
+      <!-- Redirect Button -->
+      <a href="{{ url_for('predict') }}" class="btn">Check Risk</a>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Medical Insight</h3>
+    <p>
+      Heart disease symptoms can vary significantly between individuals and
+      may develop slowly or appear suddenly.
+    </p>
+    <p>
+      Some people may experience mild symptoms, while others may notice
+      severe warning signs such as chest pain or breathlessness.
+    </p>
+    <p>
+      Experiencing multiple symptoms increases the importance of timely
+      evaluation using medical tests and predictive models.
+    </p>
+    <p>
+      This ML-based heart disease prediction system supports awareness but
+      does not replace professional medical diagnosis or treatment.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

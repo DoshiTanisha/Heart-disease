@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease Prediction | ML Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="ecg-wrapper">
+  <svg viewBox="0 0 600 100" class="ecg">
+    <polyline
+      points="
+        0,50
+        50,50
+        70,50
+        80,20
+        90,80
+        100,50
+        160,50
+        180,50
+        190,30
+        200,70
+        210,50
+        260,50
+        600,50
+      "
+      class="ecg-line"
+    />
+  </svg>
+</div>
+
+<section class="hero fade-in">
+  <h1>Machine Learning Heart Disease Prediction</h1>
+  <p>
+    Predict heart disease risk using medical parameters with high accuracy
+    ML models.
+  </p>
+  <a href="{{ url_for('predict') }}" class="btn">Start Prediction</a>
+</section>
+
+<section class="cards slide-up">
+  <div class="card">
+    <h3>Dataset Size</h3>
+    <p>70,000+ Patient Records</p>
+  </div>
+  <div class="card">
+    <h3>Best Model</h3>
+    <p>XGBoost Classifier</p>
+  </div>
+  <div class="card">
+    <h3>Highest Accuracy</h3>
+    <p>74%</p>
+  </div>
+</section>
+
+{% endblock %}

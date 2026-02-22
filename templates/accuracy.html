@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accuracy & Analysis | HeartML</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+     <nav class="navbar">
+      <h2>❤️  Cardiovascular</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/accuracy">Accuracy</a></li>
+        <li><a href="/symptoms">Symptoms</a></li>
+        <li><a href="/predict">Prediction</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </ul>
+
+    </nav>
+
+     <div class="ecg-wrapper">
+  <svg viewBox="0 0 600 100" class="ecg">
+    <polyline
+      points="
+        0,50
+        50,50
+        70,50
+        80,20
+        90,80
+        100,50
+        160,50
+        180,50
+        190,30
+        200,70
+        210,50
+        260,50
+        600,50
+      "
+      class="ecg-line"
+    />
+  </svg>
+</div>
+
+    <!-- PAGE CONTENT -->
+    <section class="page fade-in">
+      <h1>Model Accuracy & Performance Analysis</h1>
+
+      <!-- BEST MODEL HIGHLIGHT -->
+      <div class="best-model-card slide-up">
+        <h2>🏆 Best Performing Algorithm</h2>
+        <p class="model-name">XGBoost Classifier</p>
+        <p class="accuracy-score">
+          Highest Accuracy Achieved: <span>74%</span>
+        </p>
+        <p class="description">
+          XGBoost achieved the highest accuracy among all models due to its
+          gradient boosting technique, ability to handle feature interactions,
+          and effective regularization which reduces overfitting.
+        </p>
+      </div>
+
+      <!-- ACCURACY COMPARISON CHART -->
+      <div class="chart-box slide-up">
+        <h3>Accuracy Comparison of ML Algorithms</h3>
+        <canvas id="accuracyChart"></canvas>
+      </div>
+
+      <!-- HEATMAP / CORRELATION -->
+      <div class="chart-box slide-up">
+        <h3>Feature Correlation & Importance Overview</h3>
+        <canvas id="heatmapChart"></canvas>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>© 2025 Cardiovascular | Machine Learning Dashboard</footer>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>  

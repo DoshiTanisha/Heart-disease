@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ | Heart Disease Prediction{% endblock %}
+
+{% block content %}
+
+<!-- ECG Animation -->
+<div class="ecg-wrapper">
+  <svg viewBox="0 0 600 100" class="ecg">
+    <polyline
+      points="
+        0,50
+        50,50
+        70,50
+        80,20
+        90,80
+        100,50
+        160,50
+        180,50
+        190,30
+        200,70
+        210,50
+        260,50
+        600,50
+      "
+      class="ecg-line"
+    />
+  </svg>
+</div>
+
+<!-- Hero Section -->
+<section class="hero fade-in">
+  <h1>Frequently Asked Questions</h1>
+  <p>
+    Common user questions related to Heart Disease Prediction using Machine
+    Learning.
+  </p>
+</section>
+
+<!-- FAQ Search -->
+<section class="faq-search fade-in">
+  <input
+    type="text"
+    id="faqSearch"
+    placeholder="Search heart disease related questions..."
+  />
+</section>
+
+<!-- FAQ Cards -->
+<section class="cards slide-up" id="faqCards">
+
+  <div class="card">
+    <h3>What is heart disease prediction?</h3>
+    <p>
+      Heart disease prediction is a machine learning–based approach that
+      estimates the risk of heart disease using patient health data and
+      statistical models.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>How accurate is the heart disease prediction system?</h3>
+    <p>
+      The accuracy depends on the dataset, selected features, and the machine
+      learning model used. It provides probabilistic results, not guaranteed
+      outcomes.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Which factors are used to predict heart disease?</h3>
+    <p>
+      Factors include age, gender, blood pressure, cholesterol level, blood
+      sugar, ECG results, heart rate, and lifestyle indicators.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Can this system detect heart disease at an early stage?</h3>
+    <p>
+      The system can indicate early risk patterns but cannot replace clinical
+      tests or professional diagnosis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Is heart disease prediction safe to use?</h3>
+    <p>
+      Yes. The system is safe for educational and awareness purposes, but it
+      should not be used for medical treatment decisions.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Can this prediction replace medical tests?</h3>
+    <p>
+      No. It cannot replace ECG, blood tests, or doctor consultations. It only
+      assists in understanding potential risk.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>What machine learning algorithms are used?</h3>
+    <p>
+      Algorithms such as Logistic Regression, Support Vector Machine, Random
+      Forest, and XGBoost are commonly used for heart disease prediction.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>How does the model make predictions?</h3>
+    <p>
+      The model analyzes patterns in historical patient data and compares them
+      with user input to estimate heart disease risk.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Can the prediction results be wrong?</h3>
+    <p>
+      Yes. Incorrect or incomplete input data and model limitations may affect
+      prediction accuracy.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Is user data stored or shared?</h3>
+    <p>
+      No. User data is processed temporarily and is not stored or shared with
+      third parties.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Who should use heart disease prediction systems?</h3>
+    <p>
+      Students, healthcare researchers, and individuals who want to understand
+      heart health risks can use this system.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Can lifestyle changes reduce predicted heart disease risk?</h3>
+    <p>
+      Yes. Healthy diet, regular exercise, stress management, and avoiding
+      smoking can help reduce heart disease risk.
+    </p>
+  </div>
+</section>
+
+{% endblock %}
